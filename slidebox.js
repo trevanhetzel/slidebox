@@ -1,30 +1,30 @@
-jQuery(document).ready(function ($) {
+slidebox = function (params) {
 
     // Carousel
 	carousel = function () {
 
-        var $carousel = $(".carousel"),
-            $carouselItem = $(".carousel li"),
-            $triggerLeft = $(".carousel--left"),
-            $triggerRight = $(".carousel--right"),
+        var $carousel = $(params.carousel),
+            $carouselItem = $(params.item),
+            $triggerLeft = $(params.leftTrigger),
+            $triggerRight = $(params.rightTrigger),
 
             total = $carouselItem.length,
             current = 0;
 
 
-        moveLeft = function () {
+        var moveLeft = function () {
             if ( current > 0 ) {
                 $carousel.animate({ "left": "+=269px" }, "fast" );
                 current--;
             }
-        },
+        };
 
-        moveRight = function () {
+        var moveRight = function () {
             if ( current < total - 2 ) {
                 $carousel.animate({ "left": "-=269px" }, "fast" );
                 current++;
             }
-        },
+        };
 
         // Initiliaze moveLeft on trigger click
         $triggerLeft.on("click", function () {
@@ -109,4 +109,4 @@ jQuery(document).ready(function ($) {
     // Initialize functions
     carousel();
     lightbox();
-});
+};
