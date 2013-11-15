@@ -24,12 +24,15 @@ Slidebox needs to be initialized, either in ```<script>``` tags at the bottom of
 Slidebox currently accepts only three parameters.
 
 - ```container```
+
 The div containing the ```.carousel``` unordered list
 
 - ```leftTrigger```
+
 The element to show previous items
 
 - ```rightTrigger```
+
 The element to show next items
 
 ## 3. Mark it up
