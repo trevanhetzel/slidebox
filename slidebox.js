@@ -3,8 +3,8 @@ slidebox = function (params) {
     // Carousel
 	carousel = function () {
 
-        var $carousel = $(params.carousel),
-            $carouselItem = $(params.item),
+        var $carousel = $(params.container).children(".carousel"),
+            $carouselItem = $(".carousel li"),
             $triggerLeft = $(params.leftTrigger),
             $triggerRight = $(params.rightTrigger),
 
