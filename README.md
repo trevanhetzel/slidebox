@@ -25,24 +25,19 @@ Slidebox needs to be initialized, either in ```<script>``` tags at the bottom of
 
 ##Slidebox currently accepts only four parameters.##
 
-```container```
-
+**container**
 The div containing the ```.carousel``` unordered list.
 
-```leftTrigger```
-
+**leftTrigger**
 The element to show previous items.
 
-```rightTrigger```
-
+**rightTrigger**
 The element to show next items.
 
-```speed```
-
+**speed**
 How fast it slides.
 
-```length```
-
+**length**
 The amount (in pixels) it slides left or right at a time. Usually equal to the width of the images, if they're a consistent width.
 
 
