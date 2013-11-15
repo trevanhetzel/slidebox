@@ -16,30 +16,29 @@ Slidebox needs to be initialized, either in ```<script>``` tags at the bottom of
 		slidebox({
             container : ".carousel--cont",
             leftTrigger : ".carousel--left",
-            rightTrigger : ".carousel--right"
+            rightTrigger : ".carousel--right",
+            speed : "fast",
+            length : "200"
         });
 
 ### Parameters
 
 ##Slidebox currently accepts only four parameters.##
 
-- ```container```
+```container```
+The div containing the ```.carousel``` unordered list.
 
-	The div containing the ```.carousel``` unordered list.
+```leftTrigger```
+The element to show previous items.
 
-- ```leftTrigger```
+```rightTrigger```
+The element to show next items.
 
-	The element to show previous items.
+```speed```
+How fast it slides.
 
-- ```rightTrigger```
-
-	The element to show next items.
-
-- ```speed```
-	How fast it slides.
-
-- ```length```
-	The amount (in pixels) it slides left or right at a time. Usually equal to the width of the images, if they're a consistent width.
+```length```
+The amount (in pixels) it slides left or right at a time. Usually equal to the width of the images, if they're a consistent width.
 
 
 
