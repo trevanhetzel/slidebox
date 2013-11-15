@@ -1,0 +1,58 @@
+.carousel--cont {
+	width: 900px;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel {
+	list-style: none;
+	width: 9999px;
+	position: relative;
+}
+
+.carousel li {
+	float: left;
+	margin: .5em;
+}
+
+.carousel--left,
+.carousel--right {
+	position: absolute;
+	z-index: 1;
+}
+
+.carousel--left {
+	left: 0;
+}
+
+.carousel--right {
+	right: 0;
+}
+
+.lightbox-cont {
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .75;
+}
+
+.lightbox {
+	position: fixed;
+	z-index: 999;
+	top: 2.5%;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+
+	img {
+		border: .5em solid #fff;
+		width: auto;
+		margin: 0 auto;
+		max-height: 95%;
+	}
+}
