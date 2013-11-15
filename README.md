@@ -21,19 +21,27 @@ Slidebox needs to be initialized, either in ```<script>``` tags at the bottom of
 
 ### Parameters
 
-Slidebox currently accepts only three parameters.
+##Slidebox currently accepts only four parameters.##
 
 - ```container```
 
-The div containing the ```.carousel``` unordered list
+	The div containing the ```.carousel``` unordered list.
 
 - ```leftTrigger```
 
-The element to show previous items
+	The element to show previous items.
 
 - ```rightTrigger```
 
-The element to show next items
+	The element to show next items.
+
+- ```speed```
+	How fast it slides.
+
+- ```length```
+	The amount (in pixels) it slides left or right at a time. Usually equal to the width of the images, if they're a consistent width.
+
+
 
 ## 3. Mark it up
 
@@ -61,4 +69,4 @@ The lightbox portion of the plugin detects the source of the anchors in each lis
 
 ## 4. Styling
 
-I've purposely left out any skinning, as this is meant to fit into multiple layouts and contexts. However, the few styles that are in ```/demo/style.css``` are needed for everything to work. You can tweak as desired.
+I've purposely left out any skinning, as this is meant to fit into multiple layouts and contexts. However, the few styles that are in ```/demo/style.css``` are needed for everything to work. You can tweak as desired. There is no responsiveness built into this, but since it's pretty barebones it should fit seamlessly into a responsive layout.

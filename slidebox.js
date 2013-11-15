@@ -14,14 +14,14 @@ slidebox = function (params) {
 
         var moveLeft = function () {
             if ( current > 0 ) {
-                $carousel.animate({ "left": "+=269px" }, "fast" );
+                $carousel.animate({ "left": "+=" + params.length + "px" }, params.speed );
                 current--;
             }
         };
 
         var moveRight = function () {
             if ( current < total - 2 ) {
-                $carousel.animate({ "left": "-=269px" }, "fast" );
+                $carousel.animate({ "left": "-=" + params.length + "px" }, params.speed );
                 current++;
             }
         };
