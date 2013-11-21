@@ -82,7 +82,9 @@ slidebox = function (params) {
                 // Grab the image URL
                 dest = $this.attr("href");
 
-                enlarge(dest);
+                capt = $this.children("img").data("caption");
+
+                enlarge(dest, capt);
 
                 /*  If clicked on an enlarged image, stop propagation
                      so it doesn't get the close function */
@@ -96,11 +98,11 @@ slidebox = function (params) {
             $(".lightbox").remove();
         },
 
-        enlarge = function (dest) {
+        enlarge = function (dest, capt) {
             // Create new DOM elements
             $("body").append("<div class='lightbox-cont'></div><div class='lightbox'></div>");
             $(".lightbox").html(function () {
-                return "<img src='" + dest + "'>";
+                return "<img src='" + dest + "'><div class='lightbox-caption'>" + capt + "</div>";
             });
         }
 
