@@ -48,11 +48,18 @@
 	text-align: center;
 	margin: 0 auto;
 	width: 100%;
+}
 
-	img {
-		border: .5em solid #fff;
-		width: auto;
-		margin: 0 auto;
-		max-height: 95%;
-	}
+.lightbox img {
+	border: .5em solid #fff;
+	width: auto;
+	margin: 0 auto;
+	max-height: 90%;
+}
+
+.lightbox-caption {
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	width: 100%;
 }
