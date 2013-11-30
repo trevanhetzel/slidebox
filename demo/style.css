@@ -1,3 +1,8 @@
+body {
+	width: 96%;
+	margin: 20px;
+	position: relative;
+}
 .carousel-cont {
 	width: 100%;
 	overflow: hidden;

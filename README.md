@@ -15,7 +15,7 @@ Slidebox is a super tiny jQuery carousel slider with lightbox-like image enlarge
 Usage
 ========
 
-## 1. Reference jQuery
+## 1. Reference jQuery & the Slidebox library
 
 ## 2. Initialize slidebox
 
@@ -31,7 +31,7 @@ Slidebox needs to be initialized, either in ```<script>``` tags at the bottom of
 
 ### Parameters
 
-####Slidebox currently accepts only five parameters.##
+#### Slidebox currently accepts only five parameters.##
 
 **container**
 The div containing the ```.carousel``` unordered list.

@@ -1,4 +1,10 @@
-slidebox = function (params) {
+/*! Slidebox.JS - v1.0 - 2013-11-30
+ * http://github.com/trevanhetzel/slidebox
+ *
+ * Copyright (c) 2013 Trevan Hetzel <trevan.co>;
+ * Licensed under the MIT license */
+
+ slidebox = function (params) {
 
     // Carousel
 	carousel = function () {
