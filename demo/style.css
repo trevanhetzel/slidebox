@@ -1,4 +1,4 @@
-.carousel--cont {
+.carousel-cont {
 	width: 900px;
 	overflow: hidden;
 	position: relative;
@@ -15,17 +15,17 @@
 	margin: .5em;
 }
 
-.carousel--left,
-.carousel--right {
+.carousel-left,
+.carousel-right {
 	position: absolute;
 	z-index: 1;
 }
 
-.carousel--left {
+.carousel-left {
 	left: 0;
 }
 
-.carousel--right {
+.carousel-right {
 	right: 0;
 }
 

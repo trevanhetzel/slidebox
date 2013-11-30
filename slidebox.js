@@ -37,14 +37,14 @@ slidebox = function (params) {
         });
 
         // Initiliaze moveLeft on left keypress
-        $(document).keydown(function(e){
+        $(document).keydown(function (e){
             if (e.keyCode == 37) { 
                 moveLeft();
             }
         });
 
         // Initiliaze moveRight on right keypress
-        $(document).keydown(function(e){
+        $(document).keydown(function (e){
             if (e.keyCode == 39) { 
                moveRight();
             }
@@ -55,11 +55,10 @@ slidebox = function (params) {
     // Lightbox
     lightbox = function () {
 
-        var $trigger = ".carousel li a";
-        var $image = ".lightbox img";
+        var trigger = ".carousel li a";
 
         // Close lightbox when pressing esc key
-        $(document).keydown(function(e){
+        $(document).keydown(function (e){
             if (e.keyCode == 27) { 
                closeLightbox();
             }
@@ -72,7 +71,7 @@ slidebox = function (params) {
             })
 
             // If clicked on a thumbnail trigger, proceed
-            .on("click", $trigger, function (e) {
+            .on("click", trigger, function (e) {
                 var $this = $(this);
 
                 // Prevent from clicking through
@@ -82,6 +81,7 @@ slidebox = function (params) {
                 // Grab the image URL
                 dest = $this.attr("href");
 
+                // Grab the caption from data attribute
                 capt = $this.children("img").data("caption");
 
                 enlarge(dest, capt);
