@@ -6,10 +6,9 @@ Slidebox is a super tiny jQuery carousel slider with lightbox-like image enlarge
 ## Features
 
 - Sliding carousel
-- Prev/Next controls
+- Prev/Next buttons & keyboard arrow carousel controls
 - Lightbox-like image enlargement
 - Image captions
-- Keyboard navigation (left/right & ESC keys)
 - Barebones styling to make it super easy to insert into your own design
 
 
@@ -58,62 +57,27 @@ For the slider to work, it requires an unordered list with a class of ```.carous
 The lightbox portion of the plugin uses the source of the anchors in each list item as the enlarged source image. Captions can easily be added using the ```data-caption``` attribute. So the markup should look something like this:
 
 		<div class="carousel-left">Prev</div>
-	        <div class="carousel-right">Next</div>
+	    <div class="carousel-right">Next</div>
 	        
-	        <div class="carousel-cont">
-	            <ul class="carousel">
-	                <li>
-	                    <a href="http://lorempixel.com/800/500">
-	                        <img src="http://lorempixel.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://placekitten.com/800/650">
-	                        <img src="http://placekitten.com/200/150" data-caption="This is another caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://placesheen.com/825/1200">
-	                        <img src="http://placesheen.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://flickholdr.com/555/865">
-	                        <img src="http://flickholdr.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://placedog.com/700/800">
-	                        <img src="http://placedog.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://fillmurray.com/625/800">
-	                        <img src="http://fillmurray.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://nicenicejpg.com/500/600">
-	                        <img src="http://nicenicejpg.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://placecage.com/800/500">
-	                        <img src="http://placecage.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://placebear.com/900/750">
-	                        <img src="http://placebear.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="http://baconmockup.com/500/600">
-	                        <img src="http://baconmockup.com/200/150" data-caption="This is a caption">
-	                    </a>
-	                </li>
-	            </ul>
-	        </div>
+        <div class="carousel-cont">
+            <ul class="carousel">
+                <li>
+                    <a href="http://lorempixel.com/800/500">
+                        <img src="http://lorempixel.com/200/150" data-caption="This is a caption">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://placekitten.com/800/650">
+                        <img src="http://placekitten.com/200/150" data-caption="This is another caption">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://placesheen.com/825/1200">
+                        <img src="http://placesheen.com/200/150" data-caption="This is a caption">
+                    </a>
+                </li>
+            </ul>
+        </div>
 
 ## 4. Styling
 
