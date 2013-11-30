@@ -23,7 +23,7 @@ Slidebox needs to be initialized, either in ```<script>``` tags at the bottom of
 
 ### Parameters
 
-##Slidebox currently accepts only four parameters.##
+####Slidebox currently accepts only five parameters.##
 
 **container**
 The div containing the ```.carousel``` unordered list.
@@ -68,4 +68,4 @@ The lightbox portion of the plugin detects the source of the anchors in each lis
 
 ## 4. Styling
 
-I've purposely left out any skinning, as this is meant to fit into multiple layouts and contexts. However, the few styles that are in ```/demo/style.css``` are needed for everything to work. You can tweak as desired. There is no responsiveness built into this, but since it's pretty barebones it should fit seamlessly into a responsive layout.
+I've purposely left out any skinning, as this is meant to fit into multiple layouts and contexts. However, the few styles that are in ```/demo/style.css``` are needed for everything to work. You can tweak as desired. The CSS is barebones so it should fit seamlessly into any layouts, responsive or static, with a little of your own touch.
