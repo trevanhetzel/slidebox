@@ -28,37 +28,96 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a name="slidebox" class="anchor" href="#slidebox"><span class="octicon octicon-link"></span></a>Slidebox</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Slidebox is a super tiny jQuery carousel slider with lightbox-like image enlargement. I've used this on several client projects in the past, so decided to let it out into the wild! Feel free to use or modify as you wish.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Sliding carousel</li>
+<li>Prev/Next buttons &amp; keyboard arrow carousel controls</li>
+<li>Lightbox-like image enlargement</li>
+<li>Image captions</li>
+<li>Barebones styling to make it super easy to insert into your own design</li>
+</ul><h1>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<h2>
+<a name="1-reference-jquery--the-slidebox-library" class="anchor" href="#1-reference-jquery--the-slidebox-library"><span class="octicon octicon-link"></span></a>1. Reference jQuery &amp; the Slidebox library</h2>
+
+<h2>
+<a name="2-initialize-slidebox" class="anchor" href="#2-initialize-slidebox"><span class="octicon octicon-link"></span></a>2. Initialize slidebox</h2>
+
+<p>Slidebox needs to be initialized, either in <code>&lt;script&gt;</code> tags at the bottom of your HTML, or in a separate JavaScript file, like so:</p>
+
+<pre><code>    slidebox({
+        container : ".carousel-cont",
+        leftTrigger : ".carousel-left",
+        rightTrigger : ".carousel-right",
+        speed : "fast",
+        length : "200"
+    });
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h4>
+<a name="slidebox-currently-accepts-only-five-parameters" class="anchor" href="#slidebox-currently-accepts-only-five-parameters"><span class="octicon octicon-link"></span></a>Slidebox currently accepts only five parameters.</h4>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p><strong>container</strong>
+The div containing the <code>.carousel</code> unordered list.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p><strong>leftTrigger</strong>
+The element to show previous items.</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p><strong>rightTrigger</strong>
+The element to show next items.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p><strong>speed</strong>
+How fast it slides.</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p><strong>length</strong>
+The amount (in pixels) it slides left or right at a time. Usually equal to the width of the images, if they're a consistent width.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h2>
+<a name="3-mark-it-up" class="anchor" href="#3-mark-it-up"><span class="octicon octicon-link"></span></a>3. Mark it up</h2>
+
+<p>For the slider to work, it requires an unordered list with a class of <code>.carousel</code> and a containing element with a class of whatever you'd like (<code>.carousel-cont</code> is what I like to use). This containing element is what needs to be passed in to the <code>container</code> object.</p>
+
+<p>The lightbox portion of the plugin uses the source of the anchors in each list item as the enlarged source image. Captions can easily be added using the <code>data-caption</code> attribute. So the markup should look something like this:</p>
+
+<pre><code>    &lt;div class="carousel-left"&gt;Prev&lt;/div&gt;
+    &lt;div class="carousel-right"&gt;Next&lt;/div&gt;
+
+    &lt;div class="carousel-cont"&gt;
+        &lt;ul class="carousel"&gt;
+            &lt;li&gt;
+                &lt;a href="http://lorempixel.com/800/500"&gt;
+                    &lt;img src="http://lorempixel.com/200/150" data-caption="This is a caption"&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="http://placekitten.com/800/650"&gt;
+                    &lt;img src="http://placekitten.com/200/150" data-caption="This is another caption"&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="http://placesheen.com/825/1200"&gt;
+                    &lt;img src="http://placesheen.com/200/150" data-caption="This is a caption"&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+</code></pre>
+
+<h2>
+<a name="4-styling" class="anchor" href="#4-styling"><span class="octicon octicon-link"></span></a>4. Styling</h2>
+
+<p>I've purposely left out any skinning, as this is meant to fit into multiple layouts and contexts. However, the few styles that are in <code>/demo/style.css</code> are needed for everything to work. You can tweak as desired. The CSS is barebones so it should fit seamlessly into any layouts, responsive or static, with a little of your own touch.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/trevanhetzel">trevanhetzel</a></p>
